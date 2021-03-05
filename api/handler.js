@@ -24,7 +24,7 @@ module.exports.enqueue = async (event, context, callback) => {
     if (event.queryStringParameters) {
       const params = {
         MessageBody: JSON.stringify(event.queryStringParameters),
-        QueueUrl: "https://sqs.us-east-1.amazonaws.com/885121665536/WeatherRequestQueue"
+        QueueUrl: "https://sqs.us-east-1.amazonaws.com/463357988722/Weather_request"
       }
       const result = await sqs.sendMessage(params).promise();
       callback(null, {
